@@ -1016,7 +1016,7 @@ Cell <span class="ansi-green-fg">In[24], line 3</span>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pth</span> <span class="o">=</span> <span class="n">pl</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="s2">&quot;temp&quot;</span><span class="p">)</span>
 <span class="n">pth</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="n">vtk</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">pth</span><span class="p">)</span>
+<span class="n">vtk</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">pth</span> <span class="o">/</span> <span class="s2">&quot;freyberg&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1030,7 +1030,7 @@ Cell <span class="ansi-green-fg">In[24], line 3</span>
 Cell <span class="ansi-green-fg">In[25], line 4</span>
 <span class="ansi-green-intense-fg ansi-bold">      1</span> pth <span style="color: rgb(98,98,98)">=</span> pl<span style="color: rgb(98,98,98)">.</span>Path(<span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">temp</span><span style="color: rgb(175,0,0)">&#34;</span>)
 <span class="ansi-green-intense-fg ansi-bold">      2</span> pth<span style="color: rgb(98,98,98)">.</span>mkdir(exist_ok<span style="color: rgb(98,98,98)">=</span><span class="ansi-bold" style="color: rgb(0,135,0)">True</span>)
-<span class="ansi-green-fg">----&gt; 4</span> <span class="ansi-yellow-bg">vtk</span><span style="color: rgb(98,98,98)">.</span>write(pth)
+<span class="ansi-green-fg">----&gt; 4</span> <span class="ansi-yellow-bg">vtk</span><span style="color: rgb(98,98,98)">.</span>write(pth <span style="color: rgb(98,98,98)">/</span> <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">freyberg</span><span style="color: rgb(175,0,0)">&#34;</span>)
 
 <span class="ansi-red-fg">NameError</span>: name &#39;vtk&#39; is not defined
 </pre></div></div>
