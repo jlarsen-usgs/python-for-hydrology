@@ -437,9 +437,9 @@ array([[ 1,  3,  5,  7],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[[4.67184028e-310 0.00000000e+000 0.00000000e+000]
- [0.00000000e+000 0.00000000e+000 0.00000000e+000]
- [0.00000000e+000 0.00000000e+000 0.00000000e+000]]
+[[4.6757537e-310 0.0000000e+000 0.0000000e+000]
+ [0.0000000e+000 0.0000000e+000 0.0000000e+000]
+ [0.0000000e+000 0.0000000e+000 0.0000000e+000]]
 </pre></div></div>
 </div>
 <p>As you might expect, <code class="docutils literal notranslate"><span class="pre">np.zeros</span></code> and <code class="docutils literal notranslate"><span class="pre">np.ones</span></code> make arrays with values initialized one zero and one, respectively.</p>
@@ -736,7 +736,7 @@ array([2, 4, 6, 8])
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[&lt;matplotlib.lines.Line2D at 0x7fc276a89210&gt;]
+[&lt;matplotlib.lines.Line2D at 0x7f01888377d0&gt;]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -982,9 +982,9 @@ array([], dtype=int64)
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[0.59756965 0.35090774 0.75415952 0.12698706 0.31697673 0.26224236
- 0.39809106 0.05501256 0.85783613 0.32976904]
-values in 2, 3, and 7 positions [0.75415952 0.12698706 0.05501256]
+[0.08210145 0.98415012 0.65635224 0.03682089 0.40798331 0.64970152
+ 0.40787266 0.39952288 0.82923773 0.95955758]
+values in 2, 3, and 7 positions [0.65635224 0.03682089 0.39952288]
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1278,11 +1278,11 @@ array([[False,  True,  True,  True,  True],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-array([[False, False, False, False,  True],
-       [False,  True, False, False, False],
-       [False, False,  True, False,  True],
-       [False,  True, False,  True,  True],
-       [ True, False, False, False, False]])
+array([[False, False, False,  True, False],
+       [False, False, False, False, False],
+       [False, False, False,  True, False],
+       [False, False, False,  True, False],
+       [False,  True, False, False, False]])
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1299,11 +1299,11 @@ array([[False, False, False, False,  True],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-array([[ True,  True, False,  True, False],
-       [False, False, False,  True, False],
-       [ True,  True, False,  True, False],
-       [False, False,  True, False, False],
-       [False,  True,  True,  True,  True]])
+array([[ True, False, False, False,  True],
+       [ True, False,  True, False,  True],
+       [False, False, False, False,  True],
+       [ True,  True, False, False,  True],
+       [ True, False, False,  True, False]])
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1341,11 +1341,11 @@ array([[False, False, False, False, False],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-array([[ True,  True, False,  True,  True],
-       [False,  True, False,  True, False],
-       [ True,  True,  True,  True,  True],
-       [False,  True,  True,  True,  True],
-       [ True,  True,  True,  True,  True]])
+array([[ True, False, False,  True,  True],
+       [ True, False,  True, False,  True],
+       [False, False, False,  True,  True],
+       [ True,  True, False,  True,  True],
+       [ True,  True, False,  True, False]])
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1363,11 +1363,11 @@ array([[ True,  True, False,  True,  True],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-array([[0.        , 0.        , 0.27815242, 0.        , 0.        ],
-       [0.26501079, 0.        , 0.52509069, 0.        , 0.57520832],
-       [0.        , 0.        , 0.        , 0.        , 0.        ],
-       [0.28191675, 0.        , 0.        , 0.        , 0.        ],
-       [0.        , 0.        , 0.        , 0.        , 0.        ]])
+array([[0.        , 0.34765224, 0.37294889, 0.        , 0.        ],
+       [0.        , 0.27085529, 0.        , 0.42355394, 0.        ],
+       [0.31598897, 0.59583387, 0.43063094, 0.        , 0.        ],
+       [0.        , 0.        , 0.24502707, 0.        , 0.        ],
+       [0.        , 0.        , 0.20089583, 0.        , 0.38715112]])
 </pre></div></div>
 </div>
 <blockquote>
@@ -1388,11 +1388,11 @@ array([[0.        , 0.        , 0.27815242, 0.        , 0.        ],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-array([[0.        , 0.        , 0.27815242, 0.        , 0.        ],
-       [0.26501079, 0.        , 0.52509069, 0.        , 0.57520832],
-       [0.        , 0.        , 0.        , 0.        , 0.        ],
-       [0.28191675, 0.        , 0.        , 0.        , 0.        ],
-       [0.        , 0.        , 0.        , 0.        , 0.        ]])
+array([[0.        , 9.        , 9.        , 0.        , 0.        ],
+       [0.        , 0.27085529, 0.        , 9.        , 0.        ],
+       [9.        , 0.59583387, 9.        , 0.        , 0.        ],
+       [0.        , 0.        , 0.24502707, 0.        , 0.        ],
+       [0.        , 0.        , 0.20089583, 0.        , 9.        ]])
 </pre></div></div>
 </div>
 </section>
@@ -1413,9 +1413,9 @@ array([[0.        , 0.        , 0.27815242, 0.        , 0.        ],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-array([[0.2393406 , 0.11113888, 0.09207789],
-       [0.06704686, 0.37994344, 0.43073918],
-       [0.00361649, 0.1503008 , 0.50353202]])
+array([[0.95578693, 0.50828233, 0.22094104],
+       [0.21628225, 0.24234203, 0.88872418],
+       [0.74137194, 0.1204254 , 0.32991745]])
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1433,7 +1433,7 @@ array([[0.2393406 , 0.11113888, 0.09207789],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(array([0, 0, 0, 1, 1, 1, 2, 2]), array([0, 1, 2, 0, 1, 2, 0, 1]))
+(array([0, 1, 1, 2, 2]), array([2, 0, 1, 1, 2]))
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1450,9 +1450,9 @@ array([[0.2393406 , 0.11113888, 0.09207789],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-array([[0.2393406 , 0.11113888, 0.09207789],
-       [0.06704686, 0.37994344, 0.43073918],
-       [0.00361649, 0.1503008 , 0.50353202]])
+array([[0.95578693, 0.50828233, 0.22094104],
+       [0.21628225, 0.24234203, 0.88872418],
+       [0.74137194, 0.1204254 , 0.32991745]])
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1469,8 +1469,7 @@ array([[0.2393406 , 0.11113888, 0.09207789],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-array([0.2393406 , 0.11113888, 0.09207789, 0.06704686, 0.37994344,
-       0.43073918, 0.00361649, 0.1503008 ])
+array([0.22094104, 0.21628225, 0.24234203, 0.1204254 , 0.32991745])
 </pre></div></div>
 </div>
 <section id="TEST-YOUR-SKILLS-#1">
@@ -1561,9 +1560,9 @@ location than the other array, what happens if you look at the difference? - ass
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-array([[0.2393406 , 0.11113888, 0.09207789],
-       [0.06704686, 0.37994344, 0.43073918],
-       [0.00361649, 0.1503008 , 0.50353202]])
+array([[0.95578693, 0.50828233, 0.22094104],
+       [0.21628225, 0.24234203, 0.88872418],
+       [0.74137194, 0.1204254 , 0.32991745]])
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -1589,8 +1588,8 @@ array([[0.2393406 , 0.11113888, 0.09207789],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-array([[ 0.2393406 ,  0.11113888],
-       [ 0.06704686, 10.        ]])
+array([[ 0.95578693,  0.50828233],
+       [ 0.21628225, 10.        ]])
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1607,9 +1606,9 @@ array([[ 0.2393406 ,  0.11113888],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-array([[2.39340601e-01, 1.11138879e-01, 9.20778865e-02],
-       [6.70468631e-02, 1.00000000e+01, 4.30739178e-01],
-       [3.61648917e-03, 1.50300798e-01, 5.03532024e-01]])
+array([[ 0.95578693,  0.50828233,  0.22094104],
+       [ 0.21628225, 10.        ,  0.88872418],
+       [ 0.74137194,  0.1204254 ,  0.32991745]])
 </pre></div></div>
 </div>
 </section>
@@ -1632,7 +1631,7 @@ array([[2.39340601e-01, 1.11138879e-01, 9.20778865e-02],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(140473056105104, 140473056103760)
+(139644559345680, 139644559349040)
 </pre></div></div>
 </div>
 </section>
@@ -1653,7 +1652,7 @@ array([[2.39340601e-01, 1.11138879e-01, 9.20778865e-02],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(140473191559472, 140473191559472)
+(139644560601680, 139644560601680)
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1670,7 +1669,7 @@ array([[2.39340601e-01, 1.11138879e-01, 9.20778865e-02],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(140473191559792, 140473191559792)
+(139644560601744, 139644560601744)
 </pre></div></div>
 </div>
 <p><strong>Array and Boolean indexing returns a copy</strong>. Operations on the copy do not affect the original array.</p>
@@ -1706,7 +1705,7 @@ array([[2.39340601e-01, 1.11138879e-01, 9.20778865e-02],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-array([10.        ,  0.43073918,  0.50353202])
+array([ 0.95578693,  0.50828233, 10.        ,  0.88872418,  0.74137194])
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1724,7 +1723,7 @@ array([10.        ,  0.43073918,  0.50353202])
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-array([10.        , 20.        ,  0.50353202])
+array([ 0.95578693, 20.        , 10.        ,  0.88872418,  0.74137194])
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1741,9 +1740,9 @@ array([10.        , 20.        ,  0.50353202])
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-array([[2.39340601e-01, 1.11138879e-01, 9.20778865e-02],
-       [6.70468631e-02, 1.00000000e+01, 4.30739178e-01],
-       [3.61648917e-03, 1.50300798e-01, 5.03532024e-01]])
+array([[ 0.95578693,  0.50828233,  0.22094104],
+       [ 0.21628225, 10.        ,  0.88872418],
+       [ 0.74137194,  0.1204254 ,  0.32991745]])
 </pre></div></div>
 </div>
 </section>
@@ -1763,7 +1762,7 @@ array([[2.39340601e-01, 1.11138879e-01, 9.20778865e-02],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(140473056105104, 140473056104144)
+(139644559345680, 139644559347888)
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1780,7 +1779,7 @@ array([[2.39340601e-01, 1.11138879e-01, 9.20778865e-02],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(140473056104528, 140473191560112)
+(139644559348848, 139644560602032)
 </pre></div></div>
 </div>
 <section id="Reshaping-and-Stacking-Arrays">
@@ -1931,7 +1930,7 @@ array([[  0,   1,   2],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(140473191560240, 140473191560240, 140473191560240)
+(139644560601488, 139644560601488, 139644560601488)
 </pre></div></div>
 </div>
 <section id="hstack-and-vstack">
@@ -2256,7 +2255,7 @@ mask array for a == 1:
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.image.AxesImage at 0x7fc26e993e90&gt;
+&lt;matplotlib.image.AxesImage at 0x7f0188553550&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -2299,7 +2298,7 @@ mask array for a == 1:
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.image.AxesImage at 0x7fc276a1f550&gt;
+&lt;matplotlib.image.AxesImage at 0x7f0188740850&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -2327,7 +2326,7 @@ mask array for a == 1:
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.image.AxesImage at 0x7fc2a48e4e10&gt;
+&lt;matplotlib.image.AxesImage at 0x7f01887744d0&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -2606,56 +2605,56 @@ File <span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.11/s
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 (&#39;col1&#39;, &#39;col2&#39;, &#39;col3&#39;, &#39;col4&#39;)
-[(99, b&#39;row &#39;, 0.40249635, b&#39;cdl&#39;) (98, b&#39;row &#39;, 0.32321094, b&#39;cdl&#39;)
- (97, b&#39;row &#39;, 0.59826104, b&#39;cdl&#39;) (96, b&#39;row &#39;, 0.53671935, b&#39;cdl&#39;)
- (95, b&#39;row &#39;, 0.21810601, b&#39;cdl&#39;) (94, b&#39;row &#39;, 0.54100675, b&#39;cdl&#39;)
- (93, b&#39;row &#39;, 0.95824857, b&#39;cdl&#39;) (92, b&#39;row &#39;, 0.68751972, b&#39;cdl&#39;)
- (91, b&#39;row &#39;, 0.26104545, b&#39;cdl&#39;) (90, b&#39;row &#39;, 0.34101054, b&#39;cdl&#39;)
- (89, b&#39;row &#39;, 0.21531717, b&#39;cdl&#39;) (88, b&#39;row &#39;, 0.18393277, b&#39;cdl&#39;)
- (87, b&#39;row &#39;, 0.57202921, b&#39;cdl&#39;) (86, b&#39;row &#39;, 0.39515581, b&#39;cdl&#39;)
- (85, b&#39;row &#39;, 0.00664315, b&#39;cdl&#39;) (84, b&#39;row &#39;, 0.22614659, b&#39;cdl&#39;)
- (83, b&#39;row &#39;, 0.10451645, b&#39;cdl&#39;) (82, b&#39;row &#39;, 0.01742461, b&#39;cdl&#39;)
- (81, b&#39;row &#39;, 0.12893311, b&#39;cdl&#39;) (80, b&#39;row &#39;, 0.78079446, b&#39;cdl&#39;)
- (79, b&#39;row &#39;, 0.43739207, b&#39;cdl&#39;) (78, b&#39;row &#39;, 0.14738946, b&#39;cdl&#39;)
- (77, b&#39;row &#39;, 0.99898317, b&#39;cdl&#39;) (76, b&#39;row &#39;, 0.03538177, b&#39;cdl&#39;)
- (75, b&#39;row &#39;, 0.56356476, b&#39;cdl&#39;) (74, b&#39;row &#39;, 0.7081282 , b&#39;cdl&#39;)
- (73, b&#39;row &#39;, 0.03222666, b&#39;cdl&#39;) (72, b&#39;row &#39;, 0.4513557 , b&#39;cdl&#39;)
- (71, b&#39;row &#39;, 0.36045064, b&#39;cdl&#39;) (70, b&#39;row &#39;, 0.27131958, b&#39;cdl&#39;)
- (69, b&#39;row &#39;, 0.65244256, b&#39;cdl&#39;) (68, b&#39;row &#39;, 0.66358273, b&#39;cdl&#39;)
- (67, b&#39;row &#39;, 0.46920194, b&#39;cdl&#39;) (66, b&#39;row &#39;, 0.04653921, b&#39;cdl&#39;)
- (65, b&#39;row &#39;, 0.35045324, b&#39;cdl&#39;) (64, b&#39;row &#39;, 0.74006687, b&#39;cdl&#39;)
- (63, b&#39;row &#39;, 0.17281049, b&#39;cdl&#39;) (62, b&#39;row &#39;, 0.0852056 , b&#39;cdl&#39;)
- (61, b&#39;row &#39;, 0.54950701, b&#39;cdl&#39;) (60, b&#39;row &#39;, 0.50832377, b&#39;cdl&#39;)
- (59, b&#39;row &#39;, 0.07244141, b&#39;cdl&#39;) (58, b&#39;row &#39;, 0.08811513, b&#39;cdl&#39;)
- (57, b&#39;row &#39;, 0.07253092, b&#39;cdl&#39;) (56, b&#39;row &#39;, 0.28804674, b&#39;cdl&#39;)
- (55, b&#39;row &#39;, 0.00307727, b&#39;cdl&#39;) (54, b&#39;row &#39;, 0.88431567, b&#39;cdl&#39;)
- (53, b&#39;row &#39;, 0.46581265, b&#39;cdl&#39;) (52, b&#39;row &#39;, 0.14676956, b&#39;cdl&#39;)
- (51, b&#39;row &#39;, 0.04625254, b&#39;cdl&#39;) (50, b&#39;row &#39;, 0.81326174, b&#39;cdl&#39;)
- (49, b&#39;row &#39;, 0.63587759, b&#39;cdl&#39;) (48, b&#39;row &#39;, 0.61458865, b&#39;cdl&#39;)
- (47, b&#39;row &#39;, 0.36566607, b&#39;cdl&#39;) (46, b&#39;row &#39;, 0.61726291, b&#39;cdl&#39;)
- (45, b&#39;row &#39;, 0.99844457, b&#39;cdl&#39;) (44, b&#39;row &#39;, 0.50963323, b&#39;cdl&#39;)
- (43, b&#39;row &#39;, 0.78456796, b&#39;cdl&#39;) (42, b&#39;row &#39;, 0.92930143, b&#39;cdl&#39;)
- (41, b&#39;row &#39;, 0.57347168, b&#39;cdl&#39;) (40, b&#39;row &#39;, 0.59697898, b&#39;cdl&#39;)
- (39, b&#39;row &#39;, 0.46747354, b&#39;cdl&#39;) (38, b&#39;row &#39;, 0.61295296, b&#39;cdl&#39;)
- (37, b&#39;row &#39;, 0.80133133, b&#39;cdl&#39;) (36, b&#39;row &#39;, 0.81623751, b&#39;cdl&#39;)
- (35, b&#39;row &#39;, 0.68295605, b&#39;cdl&#39;) (34, b&#39;row &#39;, 0.27703671, b&#39;cdl&#39;)
- (33, b&#39;row &#39;, 0.50939233, b&#39;cdl&#39;) (32, b&#39;row &#39;, 0.688245  , b&#39;cdl&#39;)
- (31, b&#39;row &#39;, 0.34075145, b&#39;cdl&#39;) (30, b&#39;row &#39;, 0.72865981, b&#39;cdl&#39;)
- (29, b&#39;row &#39;, 0.82780307, b&#39;cdl&#39;) (28, b&#39;row &#39;, 0.90378407, b&#39;cdl&#39;)
- (27, b&#39;row &#39;, 0.3067958 , b&#39;cdl&#39;) (26, b&#39;row &#39;, 0.4259481 , b&#39;cdl&#39;)
- (25, b&#39;row &#39;, 0.57820705, b&#39;cdl&#39;) (24, b&#39;row &#39;, 0.24561294, b&#39;cdl&#39;)
- (23, b&#39;row &#39;, 0.6679109 , b&#39;cdl&#39;) (22, b&#39;row &#39;, 0.33417409, b&#39;cdl&#39;)
- (21, b&#39;row &#39;, 0.04603505, b&#39;cdl&#39;) (20, b&#39;row &#39;, 0.07186125, b&#39;cdl&#39;)
- (19, b&#39;row &#39;, 0.79779524, b&#39;cdl&#39;) (18, b&#39;row &#39;, 0.11293158, b&#39;cdl&#39;)
- (17, b&#39;row &#39;, 0.70459641, b&#39;cdl&#39;) (16, b&#39;row &#39;, 0.83099259, b&#39;cdl&#39;)
- (15, b&#39;row &#39;, 0.78993867, b&#39;cdl&#39;) (14, b&#39;row &#39;, 0.64851049, b&#39;cdl&#39;)
- (13, b&#39;row &#39;, 0.97853268, b&#39;cdl&#39;) (12, b&#39;row &#39;, 0.75949395, b&#39;cdl&#39;)
- (11, b&#39;row &#39;, 0.94231743, b&#39;cdl&#39;) (10, b&#39;row &#39;, 0.52997234, b&#39;cdl&#39;)
- ( 9, b&#39;row &#39;, 0.8463999 , b&#39;cdl&#39;) ( 8, b&#39;row &#39;, 0.68173223, b&#39;cdl&#39;)
- ( 7, b&#39;row &#39;, 0.36097419, b&#39;cdl&#39;) ( 6, b&#39;row &#39;, 0.88603697, b&#39;cdl&#39;)
- ( 5, b&#39;row &#39;, 0.78908057, b&#39;cdl&#39;) ( 4, b&#39;row &#39;, 0.72055489, b&#39;cdl&#39;)
- ( 3, b&#39;row &#39;, 0.11707225, b&#39;cdl&#39;) ( 2, b&#39;row &#39;, 0.61314813, b&#39;cdl&#39;)
- ( 1, b&#39;row &#39;, 0.03132414, b&#39;cdl&#39;) ( 0, b&#39;row &#39;, 0.96443015, b&#39;cdl&#39;)]
+[(99, b&#39;row &#39;, 0.86231329, b&#39;cdl&#39;) (98, b&#39;row &#39;, 0.99574836, b&#39;cdl&#39;)
+ (97, b&#39;row &#39;, 0.40391205, b&#39;cdl&#39;) (96, b&#39;row &#39;, 0.00206619, b&#39;cdl&#39;)
+ (95, b&#39;row &#39;, 0.73232818, b&#39;cdl&#39;) (94, b&#39;row &#39;, 0.11063624, b&#39;cdl&#39;)
+ (93, b&#39;row &#39;, 0.68341219, b&#39;cdl&#39;) (92, b&#39;row &#39;, 0.47520939, b&#39;cdl&#39;)
+ (91, b&#39;row &#39;, 0.34948174, b&#39;cdl&#39;) (90, b&#39;row &#39;, 0.35156404, b&#39;cdl&#39;)
+ (89, b&#39;row &#39;, 0.34548432, b&#39;cdl&#39;) (88, b&#39;row &#39;, 0.98138348, b&#39;cdl&#39;)
+ (87, b&#39;row &#39;, 0.03217358, b&#39;cdl&#39;) (86, b&#39;row &#39;, 0.06398267, b&#39;cdl&#39;)
+ (85, b&#39;row &#39;, 0.21050661, b&#39;cdl&#39;) (84, b&#39;row &#39;, 0.96140175, b&#39;cdl&#39;)
+ (83, b&#39;row &#39;, 0.73829004, b&#39;cdl&#39;) (82, b&#39;row &#39;, 0.93642489, b&#39;cdl&#39;)
+ (81, b&#39;row &#39;, 0.58302987, b&#39;cdl&#39;) (80, b&#39;row &#39;, 0.41303986, b&#39;cdl&#39;)
+ (79, b&#39;row &#39;, 0.03352283, b&#39;cdl&#39;) (78, b&#39;row &#39;, 0.1513613 , b&#39;cdl&#39;)
+ (77, b&#39;row &#39;, 0.66125436, b&#39;cdl&#39;) (76, b&#39;row &#39;, 0.86616445, b&#39;cdl&#39;)
+ (75, b&#39;row &#39;, 0.43817755, b&#39;cdl&#39;) (74, b&#39;row &#39;, 0.96594516, b&#39;cdl&#39;)
+ (73, b&#39;row &#39;, 0.67721474, b&#39;cdl&#39;) (72, b&#39;row &#39;, 0.93182788, b&#39;cdl&#39;)
+ (71, b&#39;row &#39;, 0.83753129, b&#39;cdl&#39;) (70, b&#39;row &#39;, 0.47482091, b&#39;cdl&#39;)
+ (69, b&#39;row &#39;, 0.86559511, b&#39;cdl&#39;) (68, b&#39;row &#39;, 0.337272  , b&#39;cdl&#39;)
+ (67, b&#39;row &#39;, 0.48792872, b&#39;cdl&#39;) (66, b&#39;row &#39;, 0.06003006, b&#39;cdl&#39;)
+ (65, b&#39;row &#39;, 0.32473081, b&#39;cdl&#39;) (64, b&#39;row &#39;, 0.20923364, b&#39;cdl&#39;)
+ (63, b&#39;row &#39;, 0.92356633, b&#39;cdl&#39;) (62, b&#39;row &#39;, 0.42119444, b&#39;cdl&#39;)
+ (61, b&#39;row &#39;, 0.52316518, b&#39;cdl&#39;) (60, b&#39;row &#39;, 0.28494545, b&#39;cdl&#39;)
+ (59, b&#39;row &#39;, 0.71392424, b&#39;cdl&#39;) (58, b&#39;row &#39;, 0.36404354, b&#39;cdl&#39;)
+ (57, b&#39;row &#39;, 0.69086481, b&#39;cdl&#39;) (56, b&#39;row &#39;, 0.01346779, b&#39;cdl&#39;)
+ (55, b&#39;row &#39;, 0.85245374, b&#39;cdl&#39;) (54, b&#39;row &#39;, 0.1531361 , b&#39;cdl&#39;)
+ (53, b&#39;row &#39;, 0.85290857, b&#39;cdl&#39;) (52, b&#39;row &#39;, 0.12547481, b&#39;cdl&#39;)
+ (51, b&#39;row &#39;, 0.34672398, b&#39;cdl&#39;) (50, b&#39;row &#39;, 0.91300245, b&#39;cdl&#39;)
+ (49, b&#39;row &#39;, 0.17447927, b&#39;cdl&#39;) (48, b&#39;row &#39;, 0.87746141, b&#39;cdl&#39;)
+ (47, b&#39;row &#39;, 0.07099787, b&#39;cdl&#39;) (46, b&#39;row &#39;, 0.68142655, b&#39;cdl&#39;)
+ (45, b&#39;row &#39;, 0.87729196, b&#39;cdl&#39;) (44, b&#39;row &#39;, 0.57769393, b&#39;cdl&#39;)
+ (43, b&#39;row &#39;, 0.74579045, b&#39;cdl&#39;) (42, b&#39;row &#39;, 0.9309324 , b&#39;cdl&#39;)
+ (41, b&#39;row &#39;, 0.54631324, b&#39;cdl&#39;) (40, b&#39;row &#39;, 0.74479824, b&#39;cdl&#39;)
+ (39, b&#39;row &#39;, 0.97359992, b&#39;cdl&#39;) (38, b&#39;row &#39;, 0.52447613, b&#39;cdl&#39;)
+ (37, b&#39;row &#39;, 0.36796579, b&#39;cdl&#39;) (36, b&#39;row &#39;, 0.57803304, b&#39;cdl&#39;)
+ (35, b&#39;row &#39;, 0.04024562, b&#39;cdl&#39;) (34, b&#39;row &#39;, 0.17277007, b&#39;cdl&#39;)
+ (33, b&#39;row &#39;, 0.8537208 , b&#39;cdl&#39;) (32, b&#39;row &#39;, 0.27618911, b&#39;cdl&#39;)
+ (31, b&#39;row &#39;, 0.64084644, b&#39;cdl&#39;) (30, b&#39;row &#39;, 0.1817637 , b&#39;cdl&#39;)
+ (29, b&#39;row &#39;, 0.33507736, b&#39;cdl&#39;) (28, b&#39;row &#39;, 0.24589531, b&#39;cdl&#39;)
+ (27, b&#39;row &#39;, 0.67450669, b&#39;cdl&#39;) (26, b&#39;row &#39;, 0.70991901, b&#39;cdl&#39;)
+ (25, b&#39;row &#39;, 0.42887086, b&#39;cdl&#39;) (24, b&#39;row &#39;, 0.61028023, b&#39;cdl&#39;)
+ (23, b&#39;row &#39;, 0.75521985, b&#39;cdl&#39;) (22, b&#39;row &#39;, 0.29727965, b&#39;cdl&#39;)
+ (21, b&#39;row &#39;, 0.65564445, b&#39;cdl&#39;) (20, b&#39;row &#39;, 0.09839535, b&#39;cdl&#39;)
+ (19, b&#39;row &#39;, 0.19321966, b&#39;cdl&#39;) (18, b&#39;row &#39;, 0.97789909, b&#39;cdl&#39;)
+ (17, b&#39;row &#39;, 0.4833067 , b&#39;cdl&#39;) (16, b&#39;row &#39;, 0.38694028, b&#39;cdl&#39;)
+ (15, b&#39;row &#39;, 0.15038607, b&#39;cdl&#39;) (14, b&#39;row &#39;, 0.2189456 , b&#39;cdl&#39;)
+ (13, b&#39;row &#39;, 0.15503825, b&#39;cdl&#39;) (12, b&#39;row &#39;, 0.16033427, b&#39;cdl&#39;)
+ (11, b&#39;row &#39;, 0.41867531, b&#39;cdl&#39;) (10, b&#39;row &#39;, 0.40348841, b&#39;cdl&#39;)
+ ( 9, b&#39;row &#39;, 0.47575815, b&#39;cdl&#39;) ( 8, b&#39;row &#39;, 0.43150049, b&#39;cdl&#39;)
+ ( 7, b&#39;row &#39;, 0.14477224, b&#39;cdl&#39;) ( 6, b&#39;row &#39;, 0.09382131, b&#39;cdl&#39;)
+ ( 5, b&#39;row &#39;, 0.23313322, b&#39;cdl&#39;) ( 4, b&#39;row &#39;, 0.56784525, b&#39;cdl&#39;)
+ ( 3, b&#39;row &#39;, 0.71899574, b&#39;cdl&#39;) ( 2, b&#39;row &#39;, 0.38643444, b&#39;cdl&#39;)
+ ( 1, b&#39;row &#39;, 0.92086364, b&#39;cdl&#39;) ( 0, b&#39;row &#39;, 0.33591915, b&#39;cdl&#39;)]
 </pre></div></div>
 </div>
 </section>
