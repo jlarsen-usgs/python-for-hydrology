@@ -60,8 +60,6 @@
 <li class="toctree-l2"><a class="reference internal" href="solutions/02_Namespace_objects_modules_packages__solution.html">02: Namespace, modules, packages, and objects</a></li>
 <li class="toctree-l2"><a class="reference internal" href="03_useful-std-library-modules.html">03: Useful standard library modules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="solutions/03_useful-std-library-modules-solutions.html">03: Solutions to Useful standard library modules exercises</a></li>
-<li class="toctree-l2"><a class="reference internal" href="solutions/03_useful-std-library-modules-solutions.html#Exercise:-Make-a-script-with-a-command-line-argument-using-sys.argv">Exercise: Make a script with a command line argument using sys.argv</a></li>
-<li class="toctree-l2"><a class="reference internal" href="solutions/03_useful-std-library-modules-solutions.html#Testing-Your-Skills-with-a-truly-awful-example:">Testing Your Skills with a truly awful example:</a></li>
 <li class="toctree-l2"><a class="reference internal" href="solutions/04_files_and_strings.html">04: File input and output</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">05: NumPy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#References">References</a></li>
@@ -437,9 +435,9 @@ array([[ 1,  3,  5,  7],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[[4.6757537e-310 0.0000000e+000 0.0000000e+000]
- [0.0000000e+000 0.0000000e+000 0.0000000e+000]
- [0.0000000e+000 0.0000000e+000 0.0000000e+000]]
+[[4.84672901e-310 0.00000000e+000 0.00000000e+000]
+ [0.00000000e+000 0.00000000e+000 0.00000000e+000]
+ [0.00000000e+000 0.00000000e+000 0.00000000e+000]]
 </pre></div></div>
 </div>
 <p>As you might expect, <code class="docutils literal notranslate"><span class="pre">np.zeros</span></code> and <code class="docutils literal notranslate"><span class="pre">np.ones</span></code> make arrays with values initialized one zero and one, respectively.</p>
@@ -499,45 +497,7 @@ array([[ 1,  3,  5,  7],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[13], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> before <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">np</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">loadtxt</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">datapath</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">/</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#39;</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">mt_st_helens_before.dat</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#39;</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">dtype</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">np</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">float32</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> <span style="color: rgb(0,135,0)">print</span>(before<span style="color: rgb(98,98,98)">.</span>shape, before<span style="color: rgb(98,98,98)">.</span>dtype)
-
-File <span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.11/site-packages/numpy/lib/npyio.py:1373</span>, in <span class="ansi-cyan-fg">loadtxt</span><span class="ansi-blue-fg">(fname, dtype, comments, delimiter, converters, skiprows, usecols, unpack, ndmin, encoding, max_rows, quotechar, like)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1370</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span style="color: rgb(0,135,0)">isinstance</span>(delimiter, <span style="color: rgb(0,135,0)">bytes</span>):
-<span class="ansi-green-intense-fg ansi-bold">   1371</span>     delimiter <span style="color: rgb(98,98,98)">=</span> delimiter<span style="color: rgb(98,98,98)">.</span>decode(<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">latin1</span><span style="color: rgb(175,0,0)">&#39;</span>)
-<span class="ansi-green-fg">-&gt; 1373</span> arr <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">_read</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">fname</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">dtype</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">dtype</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">comment</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">comment</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">delimiter</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">delimiter</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">   1374</span> <span class="ansi-yellow-bg">            </span><span class="ansi-yellow-bg">converters</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">converters</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">skiplines</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">skiprows</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">usecols</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">usecols</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">   1375</span> <span class="ansi-yellow-bg">            </span><span class="ansi-yellow-bg">unpack</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">unpack</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">ndmin</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">ndmin</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">   1376</span> <span class="ansi-yellow-bg">            </span><span class="ansi-yellow-bg">max_rows</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">max_rows</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">quote</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">quotechar</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1378</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> arr
-
-File <span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.11/site-packages/numpy/lib/npyio.py:992</span>, in <span class="ansi-cyan-fg">_read</span><span class="ansi-blue-fg">(fname, delimiter, comment, quote, imaginary_unit, usecols, skiplines, max_rows, converters, ndmin, unpack, dtype, encoding)</span>
-<span class="ansi-green-intense-fg ansi-bold">    990</span>     fname <span style="color: rgb(98,98,98)">=</span> os<span style="color: rgb(98,98,98)">.</span>fspath(fname)
-<span class="ansi-green-intense-fg ansi-bold">    991</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span style="color: rgb(0,135,0)">isinstance</span>(fname, <span style="color: rgb(0,135,0)">str</span>):
-<span class="ansi-green-fg">--&gt; 992</span>     fh <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">np</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">lib</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_datasource</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">open</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">fname</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#39;</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">rt</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#39;</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    993</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> encoding <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
-<span class="ansi-green-intense-fg ansi-bold">    994</span>         encoding <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(0,135,0)">getattr</span>(fh, <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">encoding</span><span style="color: rgb(175,0,0)">&#39;</span>, <span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">latin1</span><span style="color: rgb(175,0,0)">&#39;</span>)
-
-File <span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.11/site-packages/numpy/lib/_datasource.py:193</span>, in <span class="ansi-cyan-fg">open</span><span class="ansi-blue-fg">(path, mode, destpath, encoding, newline)</span>
-<span class="ansi-green-intense-fg ansi-bold">    156</span> <span style="color: rgb(175,0,0)">&#34;&#34;&#34;</span>
-<span class="ansi-green-intense-fg ansi-bold">    157</span> <span style="color: rgb(175,0,0)">Open `path` with `mode` and return the file object.</span>
-<span class="ansi-green-intense-fg ansi-bold">    158</span>
-<span class="ansi-green-fg">   (...)</span>
-<span class="ansi-green-intense-fg ansi-bold">    189</span>
-<span class="ansi-green-intense-fg ansi-bold">    190</span> <span style="color: rgb(175,0,0)">&#34;&#34;&#34;</span>
-<span class="ansi-green-intense-fg ansi-bold">    192</span> ds <span style="color: rgb(98,98,98)">=</span> DataSource(destpath)
-<span class="ansi-green-fg">--&gt; 193</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">ds</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">open</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">path</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">mode</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">newline</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">newline</span><span class="ansi-yellow-bg">)</span>
-
-File <span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.11/site-packages/numpy/lib/_datasource.py:533</span>, in <span class="ansi-cyan-fg">DataSource.open</span><span class="ansi-blue-fg">(self, path, mode, encoding, newline)</span>
-<span class="ansi-green-intense-fg ansi-bold">    530</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> _file_openers[ext](found, mode<span style="color: rgb(98,98,98)">=</span>mode,
-<span class="ansi-green-intense-fg ansi-bold">    531</span>                               encoding<span style="color: rgb(98,98,98)">=</span>encoding, newline<span style="color: rgb(98,98,98)">=</span>newline)
-<span class="ansi-green-intense-fg ansi-bold">    532</span> <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
-<span class="ansi-green-fg">--&gt; 533</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">FileNotFoundError</span>(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#34;</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>path<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)"> not found.</span><span style="color: rgb(175,0,0)">&#34;</span>)
-
-<span class="ansi-red-fg">FileNotFoundError</span>: data/numpy/mt_st_helens_before.dat not found.
+(466, 327) float32
 </pre></div></div>
 </div>
 <p>We can very quickly plot a two-dimensional numpy array using the <code class="docutils literal notranslate"><span class="pre">imshow</span></code> function from <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>. Spoiler alert: we will talk about <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> a bunch later.</p>
@@ -550,19 +510,21 @@ File <span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.11/s
 </pre></div>
 </div>
 </div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;matplotlib.colorbar.Colorbar at 0x7ec3384f0810&gt;
+</pre></div></div>
+</div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[14], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> plt<span style="color: rgb(98,98,98)">.</span>imshow(<span class="ansi-yellow-bg">before</span>)
-<span class="ansi-green-intense-fg ansi-bold">      2</span> plt<span style="color: rgb(98,98,98)">.</span>colorbar()
-
-<span class="ansi-red-fg">NameError</span>: name &#39;before&#39; is not defined
-</pre></div></div>
+<img alt="../../_images/notebooks_part0_python_intro_05_numpy_27_1.png" src="../../_images/notebooks_part0_python_intro_05_numpy_27_1.png" />
+</div>
 </div>
 </section>
 <section id="TEST-YOUR-SKILLS-#0">
@@ -736,7 +698,7 @@ array([2, 4, 6, 8])
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[&lt;matplotlib.lines.Line2D at 0x7f01888377d0&gt;]
+[&lt;matplotlib.lines.Line2D at 0x7ec3388a8cd0&gt;]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -982,9 +944,9 @@ array([], dtype=int64)
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[0.08210145 0.98415012 0.65635224 0.03682089 0.40798331 0.64970152
- 0.40787266 0.39952288 0.82923773 0.95955758]
-values in 2, 3, and 7 positions [0.65635224 0.03682089 0.39952288]
+[0.34085895 0.78290729 0.41729985 0.05626289 0.84123475 0.27010065
+ 0.97419579 0.40282087 0.89157075 0.24234451]
+values in 2, 3, and 7 positions [0.41729985 0.05626289 0.40282087]
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1032,16 +994,18 @@ values in 2, 3, and 7 positions [0.65635224 0.03682089 0.39952288]
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+</pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[33], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg">before</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;before&#39; is not defined
+array([[  0.,   0.,   0., ...,   0.,   0.,   0.],
+       [  0.,   0.,   0., ...,   0.,   0.,   0.],
+       [867., 872., 881., ...,   0.,   0.,   0.],
+       ...,
+       [  0.,   0.,   0., ...,   0.,   0.,   0.],
+       [  0.,   0.,   0., ...,   0.,   0.,   0.],
+       [  0.,   0.,   0., ...,   0.,   0.,   0.]], dtype=float32)
 </pre></div></div>
 </div>
 </section>
@@ -1057,16 +1021,18 @@ Cell <span class="ansi-green-fg">In[33], line 1</span>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+</pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[34], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg">before</span><span style="color: rgb(98,98,98)">==</span><span style="color: rgb(98,98,98)">0</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;before&#39; is not defined
+array([[ True,  True,  True, ...,  True,  True,  True],
+       [ True,  True,  True, ...,  True,  True,  True],
+       [False, False, False, ...,  True,  True,  True],
+       ...,
+       [ True,  True,  True, ...,  True,  True,  True],
+       [ True,  True,  True, ...,  True,  True,  True],
+       [ True,  True,  True, ...,  True,  True,  True]])
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1078,19 +1044,21 @@ Cell <span class="ansi-green-fg">In[34], line 1</span>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+</pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[35], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg">before</span> <span style="color: rgb(98,98,98)">!=</span> <span style="color: rgb(98,98,98)">0</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;before&#39; is not defined
+array([[False, False, False, ..., False, False, False],
+       [False, False, False, ..., False, False, False],
+       [ True,  True,  True, ..., False, False, False],
+       ...,
+       [False, False, False, ..., False, False, False],
+       [False, False, False, ..., False, False, False],
+       [False, False, False, ..., False, False, False]])
 </pre></div></div>
 </div>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
@@ -1098,20 +1066,6 @@ Cell <span class="ansi-green-fg">In[35], line 1</span>
 <span class="n">before</span><span class="p">[</span><span class="n">before</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[36], line 2</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span style="color: rgb(95,135,135)"># use a Boolean result to operate on an array</span>
-<span class="ansi-green-fg">----&gt; 2</span> <span class="ansi-yellow-bg">before</span>[before <span style="color: rgb(98,98,98)">==</span> <span style="color: rgb(98,98,98)">0</span>] <span style="color: rgb(98,98,98)">=</span> np<span style="color: rgb(98,98,98)">.</span>nan
-
-<span class="ansi-red-fg">NameError</span>: name &#39;before&#39; is not defined
-</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
@@ -1122,16 +1076,18 @@ Cell <span class="ansi-green-fg">In[36], line 2</span>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+</pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[37], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span class="ansi-yellow-bg">before</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;before&#39; is not defined
+array([[ nan,  nan,  nan, ...,  nan,  nan,  nan],
+       [ nan,  nan,  nan, ...,  nan,  nan,  nan],
+       [867., 872., 881., ...,  nan,  nan,  nan],
+       ...,
+       [ nan,  nan,  nan, ...,  nan,  nan,  nan],
+       [ nan,  nan,  nan, ...,  nan,  nan,  nan],
+       [ nan,  nan,  nan, ...,  nan,  nan,  nan]], dtype=float32)
 </pre></div></div>
 </div>
 <p>or, what if we want to identify cells with elevations above 2000 meters? <code class="docutils literal notranslate"><span class="pre">before</span> <span class="pre">&gt;</span> <span class="pre">2000</span></code> returns <code class="docutils literal notranslate"><span class="pre">True</span></code> for each position in the array that meets this condition (yellow in plot below), <code class="docutils literal notranslate"><span class="pre">False</span></code> everywhere else (purple)</p>
@@ -1143,18 +1099,21 @@ Cell <span class="ansi-green-fg">In[37], line 1</span>
 </pre></div>
 </div>
 </div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;matplotlib.image.AxesImage at 0x7ec3381ea350&gt;
+</pre></div></div>
+</div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[38], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> plt<span style="color: rgb(98,98,98)">.</span>imshow(<span class="ansi-yellow-bg">before</span> <span style="color: rgb(98,98,98)">&gt;</span> <span style="color: rgb(98,98,98)">2000</span>)
-
-<span class="ansi-red-fg">NameError</span>: name &#39;before&#39; is not defined
-</pre></div></div>
+<img alt="../../_images/notebooks_part0_python_intro_05_numpy_67_1.png" src="../../_images/notebooks_part0_python_intro_05_numpy_67_1.png" />
+</div>
 </div>
 </section>
 <section id="this-can-be-applied,-element-by-element-to-entire-arrays">
@@ -1278,11 +1237,11 @@ array([[False,  True,  True,  True,  True],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-array([[False, False, False,  True, False],
-       [False, False, False, False, False],
-       [False, False, False,  True, False],
-       [False, False, False,  True, False],
-       [False,  True, False, False, False]])
+array([[ True, False,  True,  True, False],
+       [False,  True, False, False,  True],
+       [False, False,  True,  True, False],
+       [ True,  True,  True, False,  True],
+       [False, False, False, False, False]])
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1299,11 +1258,11 @@ array([[False, False, False,  True, False],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-array([[ True, False, False, False,  True],
-       [ True, False,  True, False,  True],
-       [False, False, False, False,  True],
-       [ True,  True, False, False,  True],
-       [ True, False, False,  True, False]])
+array([[False,  True, False, False,  True],
+       [ True, False,  True, False, False],
+       [False,  True, False, False,  True],
+       [False, False, False, False, False],
+       [False, False, False, False, False]])
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1341,11 +1300,11 @@ array([[False, False, False, False, False],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-array([[ True, False, False,  True,  True],
-       [ True, False,  True, False,  True],
-       [False, False, False,  True,  True],
-       [ True,  True, False,  True,  True],
-       [ True,  True, False,  True, False]])
+array([[ True,  True,  True,  True,  True],
+       [ True,  True,  True, False,  True],
+       [False,  True,  True,  True,  True],
+       [ True,  True,  True, False,  True],
+       [False, False, False, False, False]])
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1363,11 +1322,11 @@ array([[ True, False, False,  True,  True],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-array([[0.        , 0.34765224, 0.37294889, 0.        , 0.        ],
-       [0.        , 0.27085529, 0.        , 0.42355394, 0.        ],
-       [0.31598897, 0.59583387, 0.43063094, 0.        , 0.        ],
-       [0.        , 0.        , 0.24502707, 0.        , 0.        ],
-       [0.        , 0.        , 0.20089583, 0.        , 0.38715112]])
+array([[0.        , 0.        , 0.        , 0.        , 0.        ],
+       [0.        , 0.        , 0.        , 0.31444462, 0.        ],
+       [0.44877865, 0.        , 0.        , 0.        , 0.        ],
+       [0.        , 0.        , 0.        , 0.20139905, 0.        ],
+       [0.35455401, 0.37352972, 0.56354313, 0.26151972, 0.38010514]])
 </pre></div></div>
 </div>
 <blockquote>
@@ -1388,11 +1347,11 @@ array([[0.        , 0.34765224, 0.37294889, 0.        , 0.        ],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-array([[0.        , 9.        , 9.        , 0.        , 0.        ],
-       [0.        , 0.27085529, 0.        , 9.        , 0.        ],
-       [9.        , 0.59583387, 9.        , 0.        , 0.        ],
-       [0.        , 0.        , 0.24502707, 0.        , 0.        ],
-       [0.        , 0.        , 0.20089583, 0.        , 9.        ]])
+array([[0.        , 0.        , 0.        , 0.        , 0.        ],
+       [0.        , 0.        , 0.        , 9.        , 0.        ],
+       [9.        , 0.        , 0.        , 0.        , 0.        ],
+       [0.        , 0.        , 0.        , 0.20139905, 0.        ],
+       [9.        , 9.        , 0.56354313, 0.26151972, 9.        ]])
 </pre></div></div>
 </div>
 </section>
@@ -1413,9 +1372,9 @@ array([[0.        , 9.        , 9.        , 0.        , 0.        ],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-array([[0.95578693, 0.50828233, 0.22094104],
-       [0.21628225, 0.24234203, 0.88872418],
-       [0.74137194, 0.1204254 , 0.32991745]])
+array([[0.02684873, 0.27793056, 0.51048557],
+       [0.71979966, 0.03533253, 0.32127223],
+       [0.80709346, 0.58054731, 0.60364249]])
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1433,7 +1392,7 @@ array([[0.95578693, 0.50828233, 0.22094104],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(array([0, 1, 1, 2, 2]), array([2, 0, 1, 1, 2]))
+(array([0, 0, 1, 1]), array([0, 1, 1, 2]))
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1450,9 +1409,9 @@ array([[0.95578693, 0.50828233, 0.22094104],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-array([[0.95578693, 0.50828233, 0.22094104],
-       [0.21628225, 0.24234203, 0.88872418],
-       [0.74137194, 0.1204254 , 0.32991745]])
+array([[0.02684873, 0.27793056, 0.51048557],
+       [0.71979966, 0.03533253, 0.32127223],
+       [0.80709346, 0.58054731, 0.60364249]])
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1469,7 +1428,7 @@ array([[0.95578693, 0.50828233, 0.22094104],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-array([0.22094104, 0.21628225, 0.24234203, 0.1204254 , 0.32991745])
+array([0.02684873, 0.27793056, 0.03533253, 0.32127223])
 </pre></div></div>
 </div>
 <section id="TEST-YOUR-SKILLS-#1">
@@ -1560,9 +1519,9 @@ location than the other array, what happens if you look at the difference? - ass
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-array([[0.95578693, 0.50828233, 0.22094104],
-       [0.21628225, 0.24234203, 0.88872418],
-       [0.74137194, 0.1204254 , 0.32991745]])
+array([[0.02684873, 0.27793056, 0.51048557],
+       [0.71979966, 0.03533253, 0.32127223],
+       [0.80709346, 0.58054731, 0.60364249]])
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -1588,8 +1547,8 @@ array([[0.95578693, 0.50828233, 0.22094104],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-array([[ 0.95578693,  0.50828233],
-       [ 0.21628225, 10.        ]])
+array([[ 0.02684873,  0.27793056],
+       [ 0.71979966, 10.        ]])
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1606,9 +1565,9 @@ array([[ 0.95578693,  0.50828233],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-array([[ 0.95578693,  0.50828233,  0.22094104],
-       [ 0.21628225, 10.        ,  0.88872418],
-       [ 0.74137194,  0.1204254 ,  0.32991745]])
+array([[ 0.02684873,  0.27793056,  0.51048557],
+       [ 0.71979966, 10.        ,  0.32127223],
+       [ 0.80709346,  0.58054731,  0.60364249]])
 </pre></div></div>
 </div>
 </section>
@@ -1631,7 +1590,7 @@ array([[ 0.95578693,  0.50828233,  0.22094104],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(139644559345680, 139644559349040)
+(139376925892528, 139376925893008)
 </pre></div></div>
 </div>
 </section>
@@ -1652,7 +1611,7 @@ array([[ 0.95578693,  0.50828233,  0.22094104],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(139644560601680, 139644560601680)
+(139376925646960, 139376925646960)
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1669,7 +1628,7 @@ array([[ 0.95578693,  0.50828233,  0.22094104],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(139644560601744, 139644560601744)
+(139376925646832, 139376925646832)
 </pre></div></div>
 </div>
 <p><strong>Array and Boolean indexing returns a copy</strong>. Operations on the copy do not affect the original array.</p>
@@ -1705,7 +1664,8 @@ array([[ 0.95578693,  0.50828233,  0.22094104],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-array([ 0.95578693,  0.50828233, 10.        ,  0.88872418,  0.74137194])
+array([ 0.51048557,  0.71979966, 10.        ,  0.80709346,  0.58054731,
+        0.60364249])
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1723,7 +1683,8 @@ array([ 0.95578693,  0.50828233, 10.        ,  0.88872418,  0.74137194])
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-array([ 0.95578693, 20.        , 10.        ,  0.88872418,  0.74137194])
+array([ 0.51048557, 20.        , 10.        ,  0.80709346,  0.58054731,
+        0.60364249])
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1740,9 +1701,9 @@ array([ 0.95578693, 20.        , 10.        ,  0.88872418,  0.74137194])
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-array([[ 0.95578693,  0.50828233,  0.22094104],
-       [ 0.21628225, 10.        ,  0.88872418],
-       [ 0.74137194,  0.1204254 ,  0.32991745]])
+array([[ 0.02684873,  0.27793056,  0.51048557],
+       [ 0.71979966, 10.        ,  0.32127223],
+       [ 0.80709346,  0.58054731,  0.60364249]])
 </pre></div></div>
 </div>
 </section>
@@ -1762,7 +1723,7 @@ array([[ 0.95578693,  0.50828233,  0.22094104],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(139644559345680, 139644559347888)
+(139376925892528, 139376925893584)
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1779,7 +1740,7 @@ array([[ 0.95578693,  0.50828233,  0.22094104],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(139644559348848, 139644560602032)
+(139376925894640, 139376925646576)
 </pre></div></div>
 </div>
 <section id="Reshaping-and-Stacking-Arrays">
@@ -1930,7 +1891,7 @@ array([[  0,   1,   2],
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-(139644560601488, 139644560601488, 139644560601488)
+(139376925648688, 139376925648688, 139376925648688)
 </pre></div></div>
 </div>
 <section id="hstack-and-vstack">
@@ -2255,7 +2216,7 @@ mask array for a == 1:
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.image.AxesImage at 0x7f0188553550&gt;
+&lt;matplotlib.image.AxesImage at 0x7ec3383d88d0&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -2298,7 +2259,7 @@ mask array for a == 1:
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.image.AxesImage at 0x7f0188740850&gt;
+&lt;matplotlib.image.AxesImage at 0x7ec33812e150&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -2326,7 +2287,7 @@ mask array for a == 1:
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.image.AxesImage at 0x7f01887744d0&gt;
+&lt;matplotlib.image.AxesImage at 0x7ec338568950&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -2492,47 +2453,44 @@ b is of shape:  (10,)
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 Data will be loaded from:  data/numpy/ahf.csv
+dypte contains the column information:  [(&#39;ID&#39;, &#39;&lt;i8&#39;), (&#39;X_UTM&#39;, &#39;&lt;f8&#39;), (&#39;Y_UTM&#39;, &#39;&lt;f8&#39;), (&#39;ELEV_M&#39;, &#39;&lt;f8&#39;), (&#39;QUAD_NAME&#39;, &#39;S15&#39;), (&#39;VEG_FS&#39;, &#39;S18&#39;), (&#39;SUR_METHOD&#39;, &#39;S3&#39;), (&#39;SUR_INFO&#39;, &#39;S20&#39;), (&#39;SUR_FILE&#39;, &#39;S12&#39;)]
+
+this is the array:  [(   1, 525705.77, 2951410.9 , 4.87, b&#39;Belle Glade&#39;, b&#39;Broadleaf Emergent&#39;, b&#39;AHF&#39;, b&#39;BE33A26506 20061004Y&#39;, b&#39;BE061004.PUB&#39;)
+ (   2, 525875.53, 2951395.58, 4.39, b&#39;Belle Glade&#39;, b&#39;Shrub&#39;, b&#39;AHF&#39;, b&#39;BE33A26506 20061004Y&#39;, b&#39;BE061004.PUB&#39;)
+ (   3, 526235.55, 2951429.23, 3.73, b&#39;Belle Glade&#39;, b&#39;Shrub&#39;, b&#39;AHF&#39;, b&#39;BE33A26506 20061004Y&#39;, b&#39;BE061004.PUB&#39;)
+ ...
+ (2863, 527017.04, 2961403.84, 4.85, b&#39;Pahokee&#39;, b&#39;Shrub&#39;, b&#39;AHF&#39;, b&#39;PA13L26906 20061012Y&#39;, b&#39;PA061012.PUB&#39;)
+ (2864, 526621.4 , 2961398.48, 4.98, b&#39;Pahokee&#39;, b&#39;Shrub&#39;, b&#39;AHF&#39;, b&#39;PA13L26906 20061012Y&#39;, b&#39;PA061012.PUB&#39;)
+ (2865, 526221.09, 2961407.38, 3.07, b&#39;Pahokee&#39;, b&#39;Knot Grass&#39;, b&#39;AHF&#39;, b&#39;PA13L26906 20061012Y&#39;, b&#39;PA061012.PUB&#39;)]
+
+this is just the column names:  (&#39;ID&#39;, &#39;X_UTM&#39;, &#39;Y_UTM&#39;, &#39;ELEV_M&#39;, &#39;QUAD_NAME&#39;, &#39;VEG_FS&#39;, &#39;SUR_METHOD&#39;, &#39;SUR_INFO&#39;, &#39;SUR_FILE&#39;)
+
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/tmp/ipykernel_4803/2653623937.py:6: VisibleDeprecationWarning: Reading unicode strings without specifying the encoding argument is deprecated. Set the encoding, use None for the system default.
+  a = np.genfromtxt(fname, dtype=None, names=True, delimiter=&#39;,&#39;)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[95]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;matplotlib.collections.PathCollection at 0x7ec3381cb090&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[95], line 6</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> <span style="color: rgb(0,135,0)">print</span>(<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">Data will be loaded from: </span><span style="color: rgb(175,0,0)">&#39;</span>, fname)
-<span class="ansi-green-intense-fg ansi-bold">      5</span> <span style="color: rgb(95,135,135)">#load the array</span>
-<span class="ansi-green-fg">----&gt; 6</span> a <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">np</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">genfromtxt</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">fname</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">dtype</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">None</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">names</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg ansi-bold" style="color: rgb(0,135,0)">True</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">delimiter</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#39;</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">,</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#39;</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      8</span> <span style="color: rgb(95,135,135)">#print information about the array</span>
-<span class="ansi-green-intense-fg ansi-bold">      9</span> <span style="color: rgb(0,135,0)">print</span>(<span style="color: rgb(175,0,0)">&#39;</span><span style="color: rgb(175,0,0)">dypte contains the column information: </span><span style="color: rgb(175,0,0)">&#39;</span>, a<span style="color: rgb(98,98,98)">.</span>dtype)
-
-File <span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.11/site-packages/numpy/lib/npyio.py:1980</span>, in <span class="ansi-cyan-fg">genfromtxt</span><span class="ansi-blue-fg">(fname, dtype, comments, delimiter, skip_header, skip_footer, converters, missing_values, filling_values, usecols, names, excludelist, deletechars, replace_space, autostrip, case_sensitive, defaultfmt, unpack, usemask, loose, invalid_raise, max_rows, encoding, ndmin, like)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1978</span>     fname <span style="color: rgb(98,98,98)">=</span> os_fspath(fname)
-<span class="ansi-green-intense-fg ansi-bold">   1979</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span style="color: rgb(0,135,0)">isinstance</span>(fname, <span style="color: rgb(0,135,0)">str</span>):
-<span class="ansi-green-fg">-&gt; 1980</span>     fid <span style="color: rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">np</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">lib</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">_datasource</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">open</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">fname</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#39;</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">rt</span><span class="ansi-yellow-bg" style="color: rgb(175,0,0)">&#39;</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1981</span>     fid_ctx <span style="color: rgb(98,98,98)">=</span> contextlib<span style="color: rgb(98,98,98)">.</span>closing(fid)
-<span class="ansi-green-intense-fg ansi-bold">   1982</span> <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
-
-File <span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.11/site-packages/numpy/lib/_datasource.py:193</span>, in <span class="ansi-cyan-fg">open</span><span class="ansi-blue-fg">(path, mode, destpath, encoding, newline)</span>
-<span class="ansi-green-intense-fg ansi-bold">    156</span> <span style="color: rgb(175,0,0)">&#34;&#34;&#34;</span>
-<span class="ansi-green-intense-fg ansi-bold">    157</span> <span style="color: rgb(175,0,0)">Open `path` with `mode` and return the file object.</span>
-<span class="ansi-green-intense-fg ansi-bold">    158</span>
-<span class="ansi-green-fg">   (...)</span>
-<span class="ansi-green-intense-fg ansi-bold">    189</span>
-<span class="ansi-green-intense-fg ansi-bold">    190</span> <span style="color: rgb(175,0,0)">&#34;&#34;&#34;</span>
-<span class="ansi-green-intense-fg ansi-bold">    192</span> ds <span style="color: rgb(98,98,98)">=</span> DataSource(destpath)
-<span class="ansi-green-fg">--&gt; 193</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">ds</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">.</span><span class="ansi-yellow-bg">open</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">path</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">mode</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">encoding</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">newline</span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">=</span><span class="ansi-yellow-bg">newline</span><span class="ansi-yellow-bg">)</span>
-
-File <span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.11/site-packages/numpy/lib/_datasource.py:533</span>, in <span class="ansi-cyan-fg">DataSource.open</span><span class="ansi-blue-fg">(self, path, mode, encoding, newline)</span>
-<span class="ansi-green-intense-fg ansi-bold">    530</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> _file_openers[ext](found, mode<span style="color: rgb(98,98,98)">=</span>mode,
-<span class="ansi-green-intense-fg ansi-bold">    531</span>                               encoding<span style="color: rgb(98,98,98)">=</span>encoding, newline<span style="color: rgb(98,98,98)">=</span>newline)
-<span class="ansi-green-intense-fg ansi-bold">    532</span> <span class="ansi-bold" style="color: rgb(0,135,0)">else</span>:
-<span class="ansi-green-fg">--&gt; 533</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">FileNotFoundError</span>(<span style="color: rgb(175,0,0)">f</span><span style="color: rgb(175,0,0)">&#34;</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>path<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span style="color: rgb(175,0,0)"> not found.</span><span style="color: rgb(175,0,0)">&#34;</span>)
-
-<span class="ansi-red-fg">FileNotFoundError</span>: data/numpy/ahf.csv not found.
-</pre></div></div>
+<img alt="../../_images/notebooks_part0_python_intro_05_numpy_162_3.png" src="../../_images/notebooks_part0_python_intro_05_numpy_162_3.png" />
+</div>
 </div>
 </section>
 <section id="Reading-a-Wrapped-MODFLOW-Array">
@@ -2605,56 +2563,56 @@ File <span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.11/s
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 (&#39;col1&#39;, &#39;col2&#39;, &#39;col3&#39;, &#39;col4&#39;)
-[(99, b&#39;row &#39;, 0.86231329, b&#39;cdl&#39;) (98, b&#39;row &#39;, 0.99574836, b&#39;cdl&#39;)
- (97, b&#39;row &#39;, 0.40391205, b&#39;cdl&#39;) (96, b&#39;row &#39;, 0.00206619, b&#39;cdl&#39;)
- (95, b&#39;row &#39;, 0.73232818, b&#39;cdl&#39;) (94, b&#39;row &#39;, 0.11063624, b&#39;cdl&#39;)
- (93, b&#39;row &#39;, 0.68341219, b&#39;cdl&#39;) (92, b&#39;row &#39;, 0.47520939, b&#39;cdl&#39;)
- (91, b&#39;row &#39;, 0.34948174, b&#39;cdl&#39;) (90, b&#39;row &#39;, 0.35156404, b&#39;cdl&#39;)
- (89, b&#39;row &#39;, 0.34548432, b&#39;cdl&#39;) (88, b&#39;row &#39;, 0.98138348, b&#39;cdl&#39;)
- (87, b&#39;row &#39;, 0.03217358, b&#39;cdl&#39;) (86, b&#39;row &#39;, 0.06398267, b&#39;cdl&#39;)
- (85, b&#39;row &#39;, 0.21050661, b&#39;cdl&#39;) (84, b&#39;row &#39;, 0.96140175, b&#39;cdl&#39;)
- (83, b&#39;row &#39;, 0.73829004, b&#39;cdl&#39;) (82, b&#39;row &#39;, 0.93642489, b&#39;cdl&#39;)
- (81, b&#39;row &#39;, 0.58302987, b&#39;cdl&#39;) (80, b&#39;row &#39;, 0.41303986, b&#39;cdl&#39;)
- (79, b&#39;row &#39;, 0.03352283, b&#39;cdl&#39;) (78, b&#39;row &#39;, 0.1513613 , b&#39;cdl&#39;)
- (77, b&#39;row &#39;, 0.66125436, b&#39;cdl&#39;) (76, b&#39;row &#39;, 0.86616445, b&#39;cdl&#39;)
- (75, b&#39;row &#39;, 0.43817755, b&#39;cdl&#39;) (74, b&#39;row &#39;, 0.96594516, b&#39;cdl&#39;)
- (73, b&#39;row &#39;, 0.67721474, b&#39;cdl&#39;) (72, b&#39;row &#39;, 0.93182788, b&#39;cdl&#39;)
- (71, b&#39;row &#39;, 0.83753129, b&#39;cdl&#39;) (70, b&#39;row &#39;, 0.47482091, b&#39;cdl&#39;)
- (69, b&#39;row &#39;, 0.86559511, b&#39;cdl&#39;) (68, b&#39;row &#39;, 0.337272  , b&#39;cdl&#39;)
- (67, b&#39;row &#39;, 0.48792872, b&#39;cdl&#39;) (66, b&#39;row &#39;, 0.06003006, b&#39;cdl&#39;)
- (65, b&#39;row &#39;, 0.32473081, b&#39;cdl&#39;) (64, b&#39;row &#39;, 0.20923364, b&#39;cdl&#39;)
- (63, b&#39;row &#39;, 0.92356633, b&#39;cdl&#39;) (62, b&#39;row &#39;, 0.42119444, b&#39;cdl&#39;)
- (61, b&#39;row &#39;, 0.52316518, b&#39;cdl&#39;) (60, b&#39;row &#39;, 0.28494545, b&#39;cdl&#39;)
- (59, b&#39;row &#39;, 0.71392424, b&#39;cdl&#39;) (58, b&#39;row &#39;, 0.36404354, b&#39;cdl&#39;)
- (57, b&#39;row &#39;, 0.69086481, b&#39;cdl&#39;) (56, b&#39;row &#39;, 0.01346779, b&#39;cdl&#39;)
- (55, b&#39;row &#39;, 0.85245374, b&#39;cdl&#39;) (54, b&#39;row &#39;, 0.1531361 , b&#39;cdl&#39;)
- (53, b&#39;row &#39;, 0.85290857, b&#39;cdl&#39;) (52, b&#39;row &#39;, 0.12547481, b&#39;cdl&#39;)
- (51, b&#39;row &#39;, 0.34672398, b&#39;cdl&#39;) (50, b&#39;row &#39;, 0.91300245, b&#39;cdl&#39;)
- (49, b&#39;row &#39;, 0.17447927, b&#39;cdl&#39;) (48, b&#39;row &#39;, 0.87746141, b&#39;cdl&#39;)
- (47, b&#39;row &#39;, 0.07099787, b&#39;cdl&#39;) (46, b&#39;row &#39;, 0.68142655, b&#39;cdl&#39;)
- (45, b&#39;row &#39;, 0.87729196, b&#39;cdl&#39;) (44, b&#39;row &#39;, 0.57769393, b&#39;cdl&#39;)
- (43, b&#39;row &#39;, 0.74579045, b&#39;cdl&#39;) (42, b&#39;row &#39;, 0.9309324 , b&#39;cdl&#39;)
- (41, b&#39;row &#39;, 0.54631324, b&#39;cdl&#39;) (40, b&#39;row &#39;, 0.74479824, b&#39;cdl&#39;)
- (39, b&#39;row &#39;, 0.97359992, b&#39;cdl&#39;) (38, b&#39;row &#39;, 0.52447613, b&#39;cdl&#39;)
- (37, b&#39;row &#39;, 0.36796579, b&#39;cdl&#39;) (36, b&#39;row &#39;, 0.57803304, b&#39;cdl&#39;)
- (35, b&#39;row &#39;, 0.04024562, b&#39;cdl&#39;) (34, b&#39;row &#39;, 0.17277007, b&#39;cdl&#39;)
- (33, b&#39;row &#39;, 0.8537208 , b&#39;cdl&#39;) (32, b&#39;row &#39;, 0.27618911, b&#39;cdl&#39;)
- (31, b&#39;row &#39;, 0.64084644, b&#39;cdl&#39;) (30, b&#39;row &#39;, 0.1817637 , b&#39;cdl&#39;)
- (29, b&#39;row &#39;, 0.33507736, b&#39;cdl&#39;) (28, b&#39;row &#39;, 0.24589531, b&#39;cdl&#39;)
- (27, b&#39;row &#39;, 0.67450669, b&#39;cdl&#39;) (26, b&#39;row &#39;, 0.70991901, b&#39;cdl&#39;)
- (25, b&#39;row &#39;, 0.42887086, b&#39;cdl&#39;) (24, b&#39;row &#39;, 0.61028023, b&#39;cdl&#39;)
- (23, b&#39;row &#39;, 0.75521985, b&#39;cdl&#39;) (22, b&#39;row &#39;, 0.29727965, b&#39;cdl&#39;)
- (21, b&#39;row &#39;, 0.65564445, b&#39;cdl&#39;) (20, b&#39;row &#39;, 0.09839535, b&#39;cdl&#39;)
- (19, b&#39;row &#39;, 0.19321966, b&#39;cdl&#39;) (18, b&#39;row &#39;, 0.97789909, b&#39;cdl&#39;)
- (17, b&#39;row &#39;, 0.4833067 , b&#39;cdl&#39;) (16, b&#39;row &#39;, 0.38694028, b&#39;cdl&#39;)
- (15, b&#39;row &#39;, 0.15038607, b&#39;cdl&#39;) (14, b&#39;row &#39;, 0.2189456 , b&#39;cdl&#39;)
- (13, b&#39;row &#39;, 0.15503825, b&#39;cdl&#39;) (12, b&#39;row &#39;, 0.16033427, b&#39;cdl&#39;)
- (11, b&#39;row &#39;, 0.41867531, b&#39;cdl&#39;) (10, b&#39;row &#39;, 0.40348841, b&#39;cdl&#39;)
- ( 9, b&#39;row &#39;, 0.47575815, b&#39;cdl&#39;) ( 8, b&#39;row &#39;, 0.43150049, b&#39;cdl&#39;)
- ( 7, b&#39;row &#39;, 0.14477224, b&#39;cdl&#39;) ( 6, b&#39;row &#39;, 0.09382131, b&#39;cdl&#39;)
- ( 5, b&#39;row &#39;, 0.23313322, b&#39;cdl&#39;) ( 4, b&#39;row &#39;, 0.56784525, b&#39;cdl&#39;)
- ( 3, b&#39;row &#39;, 0.71899574, b&#39;cdl&#39;) ( 2, b&#39;row &#39;, 0.38643444, b&#39;cdl&#39;)
- ( 1, b&#39;row &#39;, 0.92086364, b&#39;cdl&#39;) ( 0, b&#39;row &#39;, 0.33591915, b&#39;cdl&#39;)]
+[(99, b&#39;row &#39;, 0.53917775, b&#39;cdl&#39;) (98, b&#39;row &#39;, 0.38722365, b&#39;cdl&#39;)
+ (97, b&#39;row &#39;, 0.94695254, b&#39;cdl&#39;) (96, b&#39;row &#39;, 0.75173549, b&#39;cdl&#39;)
+ (95, b&#39;row &#39;, 0.50268341, b&#39;cdl&#39;) (94, b&#39;row &#39;, 0.56962244, b&#39;cdl&#39;)
+ (93, b&#39;row &#39;, 0.78023256, b&#39;cdl&#39;) (92, b&#39;row &#39;, 0.74412976, b&#39;cdl&#39;)
+ (91, b&#39;row &#39;, 0.42321042, b&#39;cdl&#39;) (90, b&#39;row &#39;, 0.62049262, b&#39;cdl&#39;)
+ (89, b&#39;row &#39;, 0.82476524, b&#39;cdl&#39;) (88, b&#39;row &#39;, 0.43798706, b&#39;cdl&#39;)
+ (87, b&#39;row &#39;, 0.02992949, b&#39;cdl&#39;) (86, b&#39;row &#39;, 0.45206534, b&#39;cdl&#39;)
+ (85, b&#39;row &#39;, 0.26943649, b&#39;cdl&#39;) (84, b&#39;row &#39;, 0.89090458, b&#39;cdl&#39;)
+ (83, b&#39;row &#39;, 0.49379959, b&#39;cdl&#39;) (82, b&#39;row &#39;, 0.84406137, b&#39;cdl&#39;)
+ (81, b&#39;row &#39;, 0.5380875 , b&#39;cdl&#39;) (80, b&#39;row &#39;, 0.77706957, b&#39;cdl&#39;)
+ (79, b&#39;row &#39;, 0.04695722, b&#39;cdl&#39;) (78, b&#39;row &#39;, 0.15454766, b&#39;cdl&#39;)
+ (77, b&#39;row &#39;, 0.10763381, b&#39;cdl&#39;) (76, b&#39;row &#39;, 0.105648  , b&#39;cdl&#39;)
+ (75, b&#39;row &#39;, 0.35514246, b&#39;cdl&#39;) (74, b&#39;row &#39;, 0.72472744, b&#39;cdl&#39;)
+ (73, b&#39;row &#39;, 0.61384317, b&#39;cdl&#39;) (72, b&#39;row &#39;, 0.31824155, b&#39;cdl&#39;)
+ (71, b&#39;row &#39;, 0.11498901, b&#39;cdl&#39;) (70, b&#39;row &#39;, 0.39831597, b&#39;cdl&#39;)
+ (69, b&#39;row &#39;, 0.20926891, b&#39;cdl&#39;) (68, b&#39;row &#39;, 0.18867486, b&#39;cdl&#39;)
+ (67, b&#39;row &#39;, 0.44151763, b&#39;cdl&#39;) (66, b&#39;row &#39;, 0.73242126, b&#39;cdl&#39;)
+ (65, b&#39;row &#39;, 0.70489889, b&#39;cdl&#39;) (64, b&#39;row &#39;, 0.68206655, b&#39;cdl&#39;)
+ (63, b&#39;row &#39;, 0.51251785, b&#39;cdl&#39;) (62, b&#39;row &#39;, 0.52723413, b&#39;cdl&#39;)
+ (61, b&#39;row &#39;, 0.11483052, b&#39;cdl&#39;) (60, b&#39;row &#39;, 0.93653234, b&#39;cdl&#39;)
+ (59, b&#39;row &#39;, 0.48738469, b&#39;cdl&#39;) (58, b&#39;row &#39;, 0.54949159, b&#39;cdl&#39;)
+ (57, b&#39;row &#39;, 0.70069762, b&#39;cdl&#39;) (56, b&#39;row &#39;, 0.330583  , b&#39;cdl&#39;)
+ (55, b&#39;row &#39;, 0.28544108, b&#39;cdl&#39;) (54, b&#39;row &#39;, 0.13188532, b&#39;cdl&#39;)
+ (53, b&#39;row &#39;, 0.80911508, b&#39;cdl&#39;) (52, b&#39;row &#39;, 0.91309387, b&#39;cdl&#39;)
+ (51, b&#39;row &#39;, 0.41655857, b&#39;cdl&#39;) (50, b&#39;row &#39;, 0.47692834, b&#39;cdl&#39;)
+ (49, b&#39;row &#39;, 0.24313279, b&#39;cdl&#39;) (48, b&#39;row &#39;, 0.64669503, b&#39;cdl&#39;)
+ (47, b&#39;row &#39;, 0.47583664, b&#39;cdl&#39;) (46, b&#39;row &#39;, 0.15760575, b&#39;cdl&#39;)
+ (45, b&#39;row &#39;, 0.35885827, b&#39;cdl&#39;) (44, b&#39;row &#39;, 0.66193914, b&#39;cdl&#39;)
+ (43, b&#39;row &#39;, 0.8660236 , b&#39;cdl&#39;) (42, b&#39;row &#39;, 0.26503314, b&#39;cdl&#39;)
+ (41, b&#39;row &#39;, 0.96288613, b&#39;cdl&#39;) (40, b&#39;row &#39;, 0.54992954, b&#39;cdl&#39;)
+ (39, b&#39;row &#39;, 0.59882644, b&#39;cdl&#39;) (38, b&#39;row &#39;, 0.68662633, b&#39;cdl&#39;)
+ (37, b&#39;row &#39;, 0.61494032, b&#39;cdl&#39;) (36, b&#39;row &#39;, 0.68529519, b&#39;cdl&#39;)
+ (35, b&#39;row &#39;, 0.46850456, b&#39;cdl&#39;) (34, b&#39;row &#39;, 0.16370864, b&#39;cdl&#39;)
+ (33, b&#39;row &#39;, 0.2316048 , b&#39;cdl&#39;) (32, b&#39;row &#39;, 0.42766291, b&#39;cdl&#39;)
+ (31, b&#39;row &#39;, 0.43156228, b&#39;cdl&#39;) (30, b&#39;row &#39;, 0.43012363, b&#39;cdl&#39;)
+ (29, b&#39;row &#39;, 0.58054869, b&#39;cdl&#39;) (28, b&#39;row &#39;, 0.41289719, b&#39;cdl&#39;)
+ (27, b&#39;row &#39;, 0.32471319, b&#39;cdl&#39;) (26, b&#39;row &#39;, 0.08709148, b&#39;cdl&#39;)
+ (25, b&#39;row &#39;, 0.26127617, b&#39;cdl&#39;) (24, b&#39;row &#39;, 0.97057973, b&#39;cdl&#39;)
+ (23, b&#39;row &#39;, 0.53543176, b&#39;cdl&#39;) (22, b&#39;row &#39;, 0.12938194, b&#39;cdl&#39;)
+ (21, b&#39;row &#39;, 0.22778048, b&#39;cdl&#39;) (20, b&#39;row &#39;, 0.87813967, b&#39;cdl&#39;)
+ (19, b&#39;row &#39;, 0.34844692, b&#39;cdl&#39;) (18, b&#39;row &#39;, 0.21723305, b&#39;cdl&#39;)
+ (17, b&#39;row &#39;, 0.77956329, b&#39;cdl&#39;) (16, b&#39;row &#39;, 0.23042217, b&#39;cdl&#39;)
+ (15, b&#39;row &#39;, 0.75234242, b&#39;cdl&#39;) (14, b&#39;row &#39;, 0.47356526, b&#39;cdl&#39;)
+ (13, b&#39;row &#39;, 0.24385252, b&#39;cdl&#39;) (12, b&#39;row &#39;, 0.77695225, b&#39;cdl&#39;)
+ (11, b&#39;row &#39;, 0.74084439, b&#39;cdl&#39;) (10, b&#39;row &#39;, 0.12682315, b&#39;cdl&#39;)
+ ( 9, b&#39;row &#39;, 0.52213961, b&#39;cdl&#39;) ( 8, b&#39;row &#39;, 0.17875473, b&#39;cdl&#39;)
+ ( 7, b&#39;row &#39;, 0.03801467, b&#39;cdl&#39;) ( 6, b&#39;row &#39;, 0.93203701, b&#39;cdl&#39;)
+ ( 5, b&#39;row &#39;, 0.16772012, b&#39;cdl&#39;) ( 4, b&#39;row &#39;, 0.34618807, b&#39;cdl&#39;)
+ ( 3, b&#39;row &#39;, 0.42917296, b&#39;cdl&#39;) ( 2, b&#39;row &#39;, 0.40986696, b&#39;cdl&#39;)
+ ( 1, b&#39;row &#39;, 0.57355917, b&#39;cdl&#39;) ( 0, b&#39;row &#39;, 0.31294055, b&#39;cdl&#39;)]
 </pre></div></div>
 </div>
 </section>
@@ -2699,7 +2657,7 @@ v_y &amp;= v_r\sin(\theta) + v_\theta\cos(\theta)
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022-2024, USGS Python for Hydrology instructors.
-      <span class="lastupdated">Last updated on Feb 09, 2024.
+      <span class="lastupdated">Last updated on Mar 18, 2024.
       </span></p>
   </div>
 
