@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../../../">
 <head>
@@ -6,24 +8,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>07: Evaluating stream capture with a Voronoi grid &mdash; Python for Hydrology 1.0a documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
       <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
-      <link rel="stylesheet" type="text/css" href="../../../_static/nbsphinx-code-cells.css" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/nbsphinx-code-cells.css?v=2aa19091" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../../../_static/documentation_options.js?v=feab032e"></script>
-        <script src="../../../_static/doctools.js?v=888ff710"></script>
-        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
-        <script src="../../../_static/copybutton.js?v=f281be69"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../../../_static/documentation_options.js?v=feab032e"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../../_static/copybutton.js?v=f281be69"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -42,9 +40,6 @@
           <a href="../../../index.html" class="icon icon-home">
             Python for Hydrology
           </a>
-              <div class="version">
-                1.0
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -57,10 +52,11 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../../part0.html">     Part 0: Introduction to Python</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../../part1.html">Part 1: Flopy</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../01-Flopy-intro.html">01: Introduction to FloPy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="02-Building-Post-Processing-MODFLOW6__solutions.html">02: Building and post-processing a MODFLOW 6 model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="03_Loading_and_visualizing_models-solutions.html">03: Loading and visualizing groundwater models</a></li>
 <li class="toctree-l2"><a class="reference internal" href="04_Modelgrid_and_intersection_solution.html">04: Modelgrid and intersection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../05-unstructured-grids.html">Unstructred Grids</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../05-unstructured-grids.html">05: Unstructred Grids</a></li>
 <li class="toctree-l2"><a class="reference internal" href="06-Project-structured_completed.html">06: FloPy class project: Structured grid version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="06-Project-quadtree.html">06: FloPy class project: Quadtree grid version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="06-Project-voronoi.html">06: FloPy class project: Voronoi grid version</a></li>
@@ -88,8 +84,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../08_Modflow-setup-demo.html">08: Modflow-setup demonstration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../09-gwt-voronoi-demo.html">Demonstration of MODFLOW 6 Groundwater Transport with a Voronoi Grid</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../10_modpath-demo.html">10: Particle tracking with MODPATH</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../09-gwt-voronoi-demo.html">09: Demonstration of MODFLOW 6 Groundwater Transport with a Voronoi Grid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../10_modpath_particle_tracking-demo.html">10: Particle tracking with MODPATH</a></li>
 </ul>
 </li>
 </ul>
@@ -1407,13 +1403,6 @@ and distribution information.
  Using Simulation name file: mfsim.nam
 
     Solving:  Stress period:     1    Time step:     1
-</pre></div></div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
 
  Run end date and time (yyyy/mm/dd hh:mm:ss): 2024/02/05 11:55:03
  Elapsed run time:  0.464 Seconds
@@ -1794,7 +1783,7 @@ array([-315.98438773])
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>it -r 5 # the timeit special function will run the folling code a few times and indicate how long
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>it -r 5 # the timeit special function will run the following code a few times and indicate how long
               <span class="c1"># the mean runtime and variance are</span>
 <span class="k">for</span> <span class="n">clay</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">cellid</span> <span class="ow">in</span> <span class="n">cells_for_wells</span><span class="p">[:</span><span class="mi">1</span><span class="p">]:</span>
@@ -1802,7 +1791,7 @@ array([-315.98438773])
 </pre></div>
 </div>
 </div>
-<div class="nboutput docutils container">
+<div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
@@ -2164,13 +2153,6 @@ writing simulation...
   writing model project...
     writing model name file...
     writing package disv...
-</pre></div></div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
     writing package ic...
     writing package npf...
     writing package rcha_0...
@@ -12889,14 +12871,6 @@ continuous
 </pre></div>
 </div>
 </div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-running layer = 0, cellid = 0
-</pre></div></div>
-</div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
@@ -12995,7 +12969,7 @@ running layer = 0, cellid = 0
 
   <div role="contentinfo">
     <p>&#169; Copyright 2022-2024, USGS Python for Hydrology instructors.
-      <span class="lastupdated">Last updated on Mar 18, 2024.
+      <span class="lastupdated">Last updated on Nov 13, 2024.
       </span></p>
   </div>
 
