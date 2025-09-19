@@ -138,79 +138,23 @@ the <code class="docutils literal notranslate"><span class="pre">docstrings</spa
 </pre></div>
 </div>
 </div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-auto-selecting option &#39;:python&#39; for &#39;bindir&#39;
-</pre></div></div>
-</div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">HTTPError</span>                                 Traceback (most recent call last)
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.11/site-packages/flopy/utils/get_modflow.py:156</span>, in <span class="ansi-cyan-fg">get_release</span><span class="ansi-blue-fg">(owner, repo, tag, quiet)</span>
-<span class="ansi-green-fg">    155</span> <span class="ansi-bold" style="color: rgb(0,135,0)">try</span>:
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">156</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">with</span> <span class="ansi-yellow-bg">urllib</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">request</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">urlopen</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">request</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">timeout</span><span class="ansi-yellow-bg">=</span><span class="ansi-green-fg ansi-yellow-bg">10</span><span class="ansi-yellow-bg">)</span> <span class="ansi-bold" style="color: rgb(0,135,0)">as</span> resp:
-<span class="ansi-green-fg">    157</span>         result = resp.read()
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.11/urllib/request.py:216</span>, in <span class="ansi-cyan-fg">urlopen</span><span class="ansi-blue-fg">(url, data, timeout, cafile, capath, cadefault, context)</span>
-<span class="ansi-green-fg">    215</span>     opener = _opener
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">216</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg">opener</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">open</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">url</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">data</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">timeout</span><span class="ansi-yellow-bg">)</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.11/urllib/request.py:525</span>, in <span class="ansi-cyan-fg">OpenerDirector.open</span><span class="ansi-blue-fg">(self, fullurl, data, timeout)</span>
-<span class="ansi-green-fg">    524</span>     meth = <span style="color: rgb(0,135,0)">getattr</span>(processor, meth_name)
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">525</span>     response = <span class="ansi-yellow-bg">meth</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">req</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">response</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">    527</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> response
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.11/urllib/request.py:634</span>, in <span class="ansi-cyan-fg">HTTPErrorProcessor.http_response</span><span class="ansi-blue-fg">(self, request, response)</span>
-<span class="ansi-green-fg">    633</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> (<span class="ansi-green-fg">200</span> &lt;= code &lt; <span class="ansi-green-fg">300</span>):
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">634</span>     response = <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">parent</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">error</span><span class="ansi-yellow-bg">(</span>
-<span class="ansi-green-fg">    635</span> <span class="ansi-yellow-bg">        </span><span class="ansi-yellow-fg ansi-yellow-bg">&#39;</span><span class="ansi-yellow-fg ansi-yellow-bg">http</span><span class="ansi-yellow-fg ansi-yellow-bg">&#39;</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">request</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">response</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">code</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">msg</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">hdrs</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">    637</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> response
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.11/urllib/request.py:563</span>, in <span class="ansi-cyan-fg">OpenerDirector.error</span><span class="ansi-blue-fg">(self, proto, *args)</span>
-<span class="ansi-green-fg">    562</span> args = (<span style="color: rgb(0,135,0)">dict</span>, <span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">default</span><span class="ansi-yellow-fg">&#39;</span>, <span class="ansi-yellow-fg">&#39;</span><span class="ansi-yellow-fg">http_error_default</span><span class="ansi-yellow-fg">&#39;</span>) + orig_args
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">563</span> <span class="ansi-bold" style="color: rgb(0,135,0)">return</span> <span class="ansi-yellow-bg" style="color: rgb(0,135,0)">self</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_call_chain</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">args</span><span class="ansi-yellow-bg">)</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.11/urllib/request.py:496</span>, in <span class="ansi-cyan-fg">OpenerDirector._call_chain</span><span class="ansi-blue-fg">(self, chain, kind, meth_name, *args)</span>
-<span class="ansi-green-fg">    495</span> func = <span style="color: rgb(0,135,0)">getattr</span>(handler, meth_name)
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">496</span> result = <span class="ansi-yellow-bg">func</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">*</span><span class="ansi-yellow-bg">args</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">    497</span> <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> result <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(175,0,255)">not</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.11/urllib/request.py:643</span>, in <span class="ansi-cyan-fg">HTTPDefaultErrorHandler.http_error_default</span><span class="ansi-blue-fg">(self, req, fp, code, msg, hdrs)</span>
-<span class="ansi-green-fg">    642</span> <span class="ansi-bold" style="color: rgb(0,135,0)">def</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-blue-fg">http_error_default</span>(<span style="color: rgb(0,135,0)">self</span>, req, fp, code, msg, hdrs):
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">643</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> HTTPError(req.full_url, code, msg, hdrs, fp)
-
-<span class="ansi-red-fg">HTTPError</span>: HTTP Error 403: rate limit exceeded
-
-The above exception was the direct cause of the following exception:
-
-<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[2]</span><span class="ansi-green-fg">, line 1</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> <span class="ansi-yellow-bg">flopy</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">utils</span><span class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">get_modflow</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-fg ansi-yellow-bg">&#34;</span><span class="ansi-yellow-fg ansi-yellow-bg">:python</span><span class="ansi-yellow-fg ansi-yellow-bg">&#34;</span><span class="ansi-yellow-bg">)</span>
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.11/site-packages/flopy/utils/get_modflow.py:397</span>, in <span class="ansi-cyan-fg">run_main</span><span class="ansi-blue-fg">(bindir, owner, repo, release_id, ostag, subset, downloads_dir, force, quiet, _is_cli)</span>
-<span class="ansi-green-fg">    394</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">KeyError</span>(<span class="ansi-yellow-fg">f</span><span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">repo </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>repo<span class="ansi-bold" style="color: rgb(175,95,135)">!r}</span><span class="ansi-yellow-fg"> not supported; choose one of </span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>available_repos<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span class="ansi-yellow-fg">&#34;</span>)
-<span class="ansi-green-fg">    396</span> <span style="color: rgb(95,135,135)"># get the selected release</span>
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">397</span> release = <span class="ansi-yellow-bg">get_release</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">owner</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">repo</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">release_id</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">quiet</span><span class="ansi-yellow-bg">)</span>
-<span class="ansi-green-fg">    398</span> assets = release.get(<span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">assets</span><span class="ansi-yellow-fg">&#34;</span>, [])
-<span class="ansi-green-fg">    399</span> <span class="ansi-bold" style="color: rgb(0,135,0)">for</span> asset <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> assets:
-
-<span class="ansi-cyan-fg">File </span><span class="ansi-green-fg">~/micromamba/envs/pyclass-docs/lib/python3.11/site-packages/flopy/utils/get_modflow.py:169</span>, in <span class="ansi-cyan-fg">get_release</span><span class="ansi-blue-fg">(owner, repo, tag, quiet)</span>
-<span class="ansi-green-fg">    167</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">ValueError</span>(<span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">GITHUB_TOKEN env is invalid</span><span class="ansi-yellow-fg">&#34;</span>) <span class="ansi-bold" style="color: rgb(0,135,0)">from</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-blue-intense-fg ansi-bold">err</span>
-<span class="ansi-green-fg">    168</span> <span class="ansi-bold" style="color: rgb(0,135,0)">elif</span> err.code == <span class="ansi-green-fg">403</span> <span class="ansi-bold" style="color: rgb(175,0,255)">and</span> <span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">rate limit exceeded</span><span class="ansi-yellow-fg">&#34;</span> <span class="ansi-bold" style="color: rgb(175,0,255)">in</span> err.reason:
-<span class="ansi-green-fg">--&gt; </span><span class="ansi-green-fg">169</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">raise</span> <span class="ansi-bold" style="color: rgb(215,95,95)">ValueError</span>(
-<span class="ansi-green-fg">    170</span>         <span class="ansi-yellow-fg">f</span><span class="ansi-yellow-fg">&#34;</span><span class="ansi-yellow-fg">use GITHUB_TOKEN env to bypass rate limit (</span><span class="ansi-bold" style="color: rgb(175,95,135)">{</span>err<span class="ansi-bold" style="color: rgb(175,95,135)">}</span><span class="ansi-yellow-fg">)</span><span class="ansi-yellow-fg">&#34;</span>
-<span class="ansi-green-fg">    171</span>     ) <span class="ansi-bold" style="color: rgb(0,135,0)">from</span><span style="color: rgb(188,188,188)"> </span><span class="ansi-blue-intense-fg ansi-bold">err</span>
-<span class="ansi-green-fg">    172</span> <span class="ansi-bold" style="color: rgb(0,135,0)">elif</span> err.code == <span class="ansi-green-fg">404</span>:
-<span class="ansi-green-fg">    173</span>     <span class="ansi-bold" style="color: rgb(0,135,0)">if</span> releases <span class="ansi-bold" style="color: rgb(175,0,255)">is</span> <span class="ansi-bold" style="color: rgb(0,135,0)">None</span>:
-
-<span class="ansi-red-fg">ValueError</span>: use GITHUB_TOKEN env to bypass rate limit (HTTP Error 403: rate limit exceeded)
+auto-selecting option &#39;:python&#39; for &#39;bindir&#39;
+fetched release &#39;22.0&#39; info from MODFLOW-ORG/executables
+downloading &#39;https://github.com/MODFLOW-ORG/executables/releases/download/22.0/linux.zip&#39; to &#39;/tmp/tmpoz66y5vi/modflow_executables-22.0-linux.zip&#39;
+extracting 25 files to &#39;/home/runner/micromamba/envs/pyclass-docs/bin&#39;
+crt (1.3.1)         mflgr (2.0.0)       mp6 (6.0.1)         vs2dt (3.3)
+gridgen (1.0.02)    mflgrdbl (2.0.0)    mp7 (7.2.001)       zbud6 (6.6.2)
+libmf6.so (6.6.2)   mfnwt (1.3.0)       mt3dms (5.3.0)      zonbud3 (3.01)
+mf2000 (1.19.01)    mfnwtdbl (1.3.0)    mt3dusgs (1.1.0)    zonbudusg (1.5)
+mf2005 (1.12.00)    mfusg (1.5)         sutra (4.0)
+mf2005dbl (1.12.00) mfusgdbl (1.5)      swtv4 (4.00.05)
+mf6 (6.6.2)         mfusg_gsi (2.4.0)   triangle (1.6)
+wrote new flopy metadata file: &#39;/home/runner/.local/share/flopy/get_modflow.json&#39;
 </pre></div></div>
 </div>
 <p>Before creating any of the MODFLOW 6 FloPy objects you should define the simulation workspace (<code class="docutils literal notranslate"><span class="pre">ws</span></code>) where the model files are and the simulation name (<code class="docutils literal notranslate"><span class="pre">name</span></code>). The <code class="docutils literal notranslate"><span class="pre">ws</span></code> should be set to <code class="docutils literal notranslate"><span class="pre">'data/ex01b'</span></code> and <code class="docutils literal notranslate"><span class="pre">name</span></code> should be set to <code class="docutils literal notranslate"><span class="pre">ex01b</span></code>.</p>
@@ -296,7 +240,7 @@ iterative model solution objects.</p>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.collections.LineCollection at 0x7ff5435bd4d0&gt;
+&lt;matplotlib.collections.LineCollection at 0x7f74b0fd39d0&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -321,7 +265,7 @@ iterative model solution objects.</p>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.collections.PatchCollection at 0x7ff54343c290&gt;
+&lt;matplotlib.collections.PatchCollection at 0x7f74b0eadc90&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -535,7 +479,7 @@ INFORMATION: maxbound in (&#39;gwf6&#39;, &#39;riv&#39;, &#39;dimensions&#39;) c
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-FloPy is using the following executable to run the model: ../../../../../../../../../.local/bin/mf6
+FloPy is using the following executable to run the model: ../../../../../../../../../micromamba/envs/pyclass-docs/bin/mf6
                                    MODFLOW 6
                 U.S. GEOLOGICAL SURVEY MODULAR HYDROLOGIC MODEL
                             VERSION 6.6.2 05/12/2025
@@ -560,15 +504,15 @@ and distribution information.
 
  MODFLOW runs in SEQUENTIAL mode
 
- Run start date and time (yyyy/mm/dd hh:mm:ss): 2025/09/19 16:54:44
+ Run start date and time (yyyy/mm/dd hh:mm:ss): 2025/09/19 17:12:17
 
  Writing simulation list file: mfsim.lst
  Using Simulation name file: mfsim.nam
 
     Solving:  Stress period:     1    Time step:     1
 
- Run end date and time (yyyy/mm/dd hh:mm:ss): 2025/09/19 16:54:44
- Elapsed run time:  0.034 Seconds
+ Run end date and time (yyyy/mm/dd hh:mm:ss): 2025/09/19 17:12:17
+ Elapsed run time:  0.035 Seconds
 
  Normal termination of simulation.
 </pre></div></div>
